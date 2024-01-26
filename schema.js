@@ -17,5 +17,6 @@ ProjectSchema = new Schema({
   name: { type: String, required: true },
 })
 
-module.exports = mongoose.model('Issue', IssueSchema)
-module.exports = mongoose.model('Project', ProjectSchema)
+const Issue = mongoose.model('Issue', IssueSchema)
+const Project = mongoose.model('Project', ProjectSchema)
+module.exports = { Issue, Project }
